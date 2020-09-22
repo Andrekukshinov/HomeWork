@@ -3,7 +3,7 @@ package by.kukshinov.app.password_comparer.factories;
 import by.kukshinov.app.password_comparer.view.DataPrinter;
 import by.kukshinov.app.password_comparer.view.impl.FilePrinter;
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static by.kukshinov.app.password_comparer.factory_enums.Printers.*;
 import static by.kukshinov.app.password_comparer.util.paths.FilePaths.*;

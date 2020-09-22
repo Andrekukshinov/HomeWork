@@ -1,11 +1,9 @@
 package by.kukshinov.app.password_comparer.data.impl;
 
 import by.kukshinov.app.password_comparer.data.DataAcquirer;
-import by.kukshinov.app.password_comparer.util.impl.DumpPasswordEncoder;
 
 import java.io.*;
 
-import static by.kukshinov.app.password_comparer.util.paths.FilePaths.TEST_RESOURCE_PASSWORDS;
 
 public class FileDataAcquirer implements DataAcquirer {
     private final String filePath;

@@ -1,6 +1,5 @@
 package by.kukshinov.app.password_comparer.view.impl;
 
-import by.kukshinov.app.password_comparer.factories.PasswordEncoderFactory;
 import by.kukshinov.app.password_comparer.view.DataPrinter;
 
 import java.io.BufferedWriter;
@@ -8,7 +7,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Objects;
 
-import static by.kukshinov.app.password_comparer.factory_enums.Encoders.*;
 
 public class FilePrinter implements DataPrinter {
     private final String FILE_PATH;
@@ -19,8 +17,7 @@ public class FilePrinter implements DataPrinter {
 
     public void printData(String data) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH))) {
-            String result = PasswordEncoderFactory.createEncoder(DUMP).encode(data);
-            writer.write(result);
+            writer.write(data);
         } catch (IOException e) {
             e.printStackTrace();
         }
