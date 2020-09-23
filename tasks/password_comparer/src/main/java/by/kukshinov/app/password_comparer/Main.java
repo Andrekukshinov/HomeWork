@@ -9,8 +9,9 @@ import static by.kukshinov.app.password_comparer.util.paths.FilePaths.*;
 
 public class Main {
     public static void main(String[] args) {
+        String userPassword = args[0];
         PasswordComparer comparer = new PasswordComparer();
-        String result = comparer.comparePasswords(args[0], RESOURCE_PASSWORDS);
+        String result = comparer.comparePasswords(userPassword, RESOURCE_PASSWORDS);
 
         // second argument is required here 4 changing password in destination file,
         // and path of this file is given here
