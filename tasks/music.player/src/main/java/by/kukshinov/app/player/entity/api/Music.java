@@ -6,7 +6,7 @@ import by.kukshinov.app.player.enums.MusicType;
 import java.util.Set;
 
 public abstract class Music {
-    protected Set<Song> album;
+    private Set<Song> album;
     protected Music(Set<Song> album) {
         this.album = album;
     }
