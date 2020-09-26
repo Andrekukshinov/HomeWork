@@ -2,7 +2,7 @@ package by.kukshinov.app.player.view.impl;
 
 import by.kukshinov.app.player.entity.api.DataStorage;
 import by.kukshinov.app.player.entity.music.song.Song;
-import by.kukshinov.app.player.view.MusicPlayer;
+import by.kukshinov.app.player.view.api.MusicPlayer;
 
 import java.util.Set;
 
