@@ -119,7 +119,6 @@ public class MusicCreator {
     }
 
 
-    // TODO: 25.09.2020
     public Music createMusicList() {
 	   Music result = null;
 	   switch (DATA_SOURCE) {
