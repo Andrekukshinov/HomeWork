@@ -11,7 +11,7 @@ public class DataOutputCreatorFactoryTest {
     @Test
     public void shouldGetRequiredDataOutputClass() {
 	   MusicDataPrinter printer = new DataOutputCreatorFactory().createDataPrinter(PrinterType.FILE, "nothing here");
-
+//info here
 	   Assert.assertTrue(printer instanceof FileMusicDataPrinter);
     }
 }
