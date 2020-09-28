@@ -1,7 +1,7 @@
 package by.kukshinov.app.player.logics.impl;
 
-import by.kukshinov.app.player.entity.api.DataStorage;
-import by.kukshinov.app.player.entity.api.Music;
+import by.kukshinov.app.player.entity.storage.api.DataStorage;
+import by.kukshinov.app.player.entity.music.api.Music;
 import by.kukshinov.app.player.entity.music.song.Song;
 import by.kukshinov.app.player.enums.MusicType;
 import by.kukshinov.app.player.logics.SavingSoftware;

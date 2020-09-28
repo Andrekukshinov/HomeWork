@@ -1,10 +1,9 @@
 package by.kukshinov.app.player.data.api;
 
-import by.kukshinov.app.player.entity.api.DataStorage;
+import by.kukshinov.app.player.entity.storage.api.DataStorage;
 import by.kukshinov.app.player.exeptions.NoSuchMusicTypeException;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public interface PlayListDataAcquirer {

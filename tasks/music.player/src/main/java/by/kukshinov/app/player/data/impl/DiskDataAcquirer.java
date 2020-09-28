@@ -1,7 +1,7 @@
 package by.kukshinov.app.player.data.impl;
 
 import by.kukshinov.app.player.data.api.DataAcquirer;
-import by.kukshinov.app.player.entity.api.DataStorage;
+import by.kukshinov.app.player.entity.storage.api.DataStorage;
 
 public class DiskDataAcquirer implements DataAcquirer {
 

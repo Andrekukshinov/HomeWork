@@ -2,10 +2,9 @@ package by.kukshinov.app.player.logics.factory;
 
 import by.kukshinov.app.player.constants.FilePath;
 import by.kukshinov.app.player.constants.PlayLists;
-import by.kukshinov.app.player.entity.api.Music;
-import by.kukshinov.app.player.entity.music.rock.impl.RockBand;
+import by.kukshinov.app.player.entity.music.api.Music;
+import by.kukshinov.app.player.entity.music.impl.RockBand;
 import by.kukshinov.app.player.enums.PlayListDataSource;
-import by.kukshinov.app.player.exeptions.NoMusicianException;
 import by.kukshinov.app.player.factory.MusicCreator;
 import org.junit.Assert;
 import org.junit.Test;
@@ -15,7 +14,7 @@ public class MusicCreatorTest {
     public void testMusicCreatorShouldReturnQueenPlayList(){
         //given
 	   RockBand queen = new RockBand(PlayLists.QUEEN, "queen" );
-	   MusicCreator creator = new MusicCreator(PlayListDataSource.FILE, FilePath.FILE_PATH_FOR_TESTS);
+	   MusicCreator creator = new MusicCreator(PlayListDataSource.FILE, FilePath.FILE_PATH_FOR_TESTS_INPUT);
 	   //when
 	   Music createdBand = creator.createMusicList();
 	   //then

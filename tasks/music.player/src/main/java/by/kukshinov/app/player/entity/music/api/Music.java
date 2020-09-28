@@ -1,4 +1,4 @@
-package by.kukshinov.app.player.entity.api;
+package by.kukshinov.app.player.entity.music.api;
 
 import by.kukshinov.app.player.entity.music.song.Song;
 import by.kukshinov.app.player.enums.MusicType;

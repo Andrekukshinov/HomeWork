@@ -4,9 +4,9 @@ import by.kukshinov.app.player.constants.PlayLists;
 import by.kukshinov.app.player.data.api.PlayListDataAcquirer;
 import by.kukshinov.app.player.data.impl.ConsolePlayListDataAcquirer;
 import by.kukshinov.app.player.data.impl.FilePlayListDataAcquirer;
-import by.kukshinov.app.player.entity.api.Music;
-import by.kukshinov.app.player.entity.music.classic.impl.Composer;
-import by.kukshinov.app.player.entity.music.rock.impl.RockBand;
+import by.kukshinov.app.player.entity.music.api.Music;
+import by.kukshinov.app.player.entity.music.impl.ClassicMusician;
+import by.kukshinov.app.player.entity.music.impl.RockBand;
 import by.kukshinov.app.player.entity.music.song.Song;
 import by.kukshinov.app.player.enums.PlayListDataSource;
 import by.kukshinov.app.player.enums.SingerName;
@@ -23,8 +23,6 @@ public class MusicCreator {
     private final PlayListDataAcquirer playListAcquirer;
     private final String FILE_PATH;
     private final PlayListDataSource DATA_SOURCE;
-
-
     public MusicCreator(PlayListDataSource dataSource, String path) {
 	   switch (dataSource) {
 		  case FILE: {
@@ -42,7 +40,6 @@ public class MusicCreator {
 		  default: throw new RuntimeException(new NoSuchDataCreatorException());
 	   }
     }
-
     private Set<Song> chooseAlbum(SingerName name) throws NoMusicianException {
 	   Set<Song> playList = new HashSet<>();
 	   switch (name) {
@@ -51,15 +48,15 @@ public class MusicCreator {
 		  }
 		  break;
 		  case SHINEDOWN: {
-		      playList = PlayLists.SHINEDOWN;
+			 playList = PlayLists.SHINEDOWN;
 		  }
 		  break;
 		  case MOZART: {
-		      playList = PlayLists.MOZART;
+			 playList = PlayLists.MOZART;
 		  }
 		  break;
 		  case BEETHOVEN: {
-		      playList = PlayLists.BEETHOVEN;
+			 playList = PlayLists.BEETHOVEN;
 		  }
 		  break;
 		  default:
@@ -88,7 +85,7 @@ public class MusicCreator {
 	   } else if (musicType.equalsIgnoreCase("CLASSIC")) {
 		  try {
 			 songs = chooseAlbum(SingerName.valueOf(artistName.toUpperCase()));
-			 playList = new Composer(songs, artistName);
+			 playList = new ClassicMusician(songs, artistName);
 		  } catch (NoMusicianException e) {
 			 throw new RuntimeException(e);
 		  }

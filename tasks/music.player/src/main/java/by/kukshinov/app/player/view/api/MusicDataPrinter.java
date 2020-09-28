@@ -1,9 +1,8 @@
 package by.kukshinov.app.player.view.api;
 
-import by.kukshinov.app.player.entity.api.DataStorage;
-import by.kukshinov.app.player.entity.storage.Disk;
+import by.kukshinov.app.player.entity.storage.api.DataStorage;
 
 public interface MusicDataPrinter {
-    void getLength(DataStorage disk);
-    void getSongsData(DataStorage disk);
+    void printLength(DataStorage disk);
+    void printSongsData(DataStorage disk);
 }

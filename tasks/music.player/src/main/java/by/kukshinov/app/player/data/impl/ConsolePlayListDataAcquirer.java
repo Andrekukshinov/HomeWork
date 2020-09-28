@@ -1,13 +1,10 @@
 package by.kukshinov.app.player.data.impl;
 
 import by.kukshinov.app.player.data.api.PlayListDataAcquirer;
-import by.kukshinov.app.player.entity.api.Music;
-import by.kukshinov.app.player.enums.MusicType;
 import by.kukshinov.app.player.exeptions.NoSuchMusicTypeException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class ConsolePlayListDataAcquirer implements PlayListDataAcquirer {
 

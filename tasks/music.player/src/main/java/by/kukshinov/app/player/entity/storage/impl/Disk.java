@@ -1,7 +1,7 @@
-package by.kukshinov.app.player.entity.storage;
+package by.kukshinov.app.player.entity.storage.impl;
 
-import by.kukshinov.app.player.entity.api.DataStorage;
 import by.kukshinov.app.player.entity.music.song.Song;
+import by.kukshinov.app.player.entity.storage.api.DataStorage;
 
 import java.util.HashSet;
 import java.util.Set;
