@@ -10,11 +10,8 @@ import org.junit.Test;
 public class DataOutputCreatorFactoryTest {
     @Test
     public void shouldGetRequiredDataOutputClass() {
-        //given
-	   MusicDataPrinter printer;
-	   //then
-	   printer = new DataOutputCreatorFactory().createDataPrinter(PrinterType.FILE, "nothing here");
-	   //when
+	   MusicDataPrinter printer = new DataOutputCreatorFactory().createDataPrinter(PrinterType.FILE, "nothing here");
+
 	   Assert.assertTrue(printer instanceof FileMusicDataPrinter);
     }
 }

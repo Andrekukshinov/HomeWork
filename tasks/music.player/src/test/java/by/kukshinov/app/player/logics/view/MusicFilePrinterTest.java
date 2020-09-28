@@ -33,7 +33,7 @@ public class MusicFilePrinterTest {
     public void shouldWriteMusicDataToFile(){
         //given
 	   Set<Song> songs = new HashSet<>();
-	   Music music = TestMusicDisk.getMusician(songs);
+	   Music music = new TestMusicDisk().getMusician(songs);
 	   Disk flash = new Disk();
 	   SavingSoftware saver = new DiskSaver(flash);
 	   saver.saveSongsData(music);
@@ -49,7 +49,7 @@ public class MusicFilePrinterTest {
     public void shouldWriteMusicLengthToFile(){
         //given
 	   Set<Song> songs = new HashSet<>();
-	   Music music = TestMusicDisk.getMusician(songs);
+	   Music music = new TestMusicDisk().getMusician(songs);
 	   Disk flash = new Disk();
 	   SavingSoftware saver = new DiskSaver(flash);
 	   saver.saveSongsData(music);

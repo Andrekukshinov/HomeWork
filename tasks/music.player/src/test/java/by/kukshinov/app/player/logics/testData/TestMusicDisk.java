@@ -13,7 +13,7 @@ import java.util.Set;
 
 public class TestMusicDisk {
     @NotNull
-    public static Music getMusician(Set<Song> threatToSurvival) {
+    public Music getMusician(Set<Song> threatToSurvival) {
 	   threatToSurvival.add(new Song("Cut the cord", 239));
 	   threatToSurvival.add(new Song("Black cadillac", 254));
 	   threatToSurvival.add(new Song("Oblivion", 246));

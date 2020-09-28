@@ -10,24 +10,24 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class MusicCreatorTest {
+    private final String bandName = "queen";
+
     @Test
-    public void testMusicCreatorShouldReturnQueenPlayList(){
-        //given
-	   RockBand queen = new RockBand(PlayLists.QUEEN, "queen" );
-	   MusicCreator creator = new MusicCreator(PlayListDataSource.FILE, FilePath.FILE_PATH_FOR_TESTS_INPUT);
+    public void testMusicCreatorShouldReturnQueenPlayList() {
+	   //given
+	   RockBand queen = new RockBand(PlayLists.QUEEN, bandName);
 	   //when
-	   Music createdBand = creator.createMusicList();
+	   Music createdBand = new MusicCreator(PlayListDataSource.FILE, FilePath.FILE_PATH_FOR_TESTS_INPUT).createMusicList();
 	   //then
 	   Assert.assertEquals(createdBand, queen);
     }
+
     @Test(expected = RuntimeException.class)//then
-    public void testMusicCreatorShouldThrowException(){
-        //given
-	   RockBand queen = new RockBand(PlayLists.QUEEN, "queen" );
-	   MusicCreator creator = new MusicCreator(PlayListDataSource.FILE, FilePath.FILE_PATH_FOR_TESTS_EXCEPTION);
-	   Music createdBand = creator.createMusicList();
+    public void testMusicCreatorShouldThrowException() {
+	   //given
+	   RockBand queen = new RockBand(PlayLists.QUEEN, bandName);
+	   Music createdBand =  new MusicCreator(PlayListDataSource.FILE, FilePath.FILE_PATH_FOR_TESTS_EXCEPTION).createMusicList();
 	   //when
 	   Assert.assertEquals(createdBand, queen);
-
     }
 }
