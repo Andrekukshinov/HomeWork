@@ -1,0 +1,1 @@
+The playlist is [Song{name='Another one bites the dust', length=356}, Song{name='We will rock you', length=147}, Song{name='Bohemian rhapsody', length=548}]
