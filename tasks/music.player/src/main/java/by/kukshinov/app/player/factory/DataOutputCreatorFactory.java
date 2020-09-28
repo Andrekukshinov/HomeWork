@@ -8,8 +8,8 @@ import by.kukshinov.app.player.view.impl.FileMusicDataPrinter;
 public class DataOutputCreatorFactory {
     public MusicDataPrinter createDataPrinter(PrinterType type, String file) {
         switch (type) {
-		  case CONSOLE: return new ConsoleMusicDataPrinter();
 		  case FILE: return new FileMusicDataPrinter(file);
+		  case CONSOLE: return new ConsoleMusicDataPrinter();
 		  default:throw new RuntimeException("NoMusicDataPrinterException");
 	   }
     }

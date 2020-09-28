@@ -119,19 +119,19 @@ public class MusicCreator {
     public Music createMusicList() {
 	   Music result = null;
 	   switch (DATA_SOURCE) {
-		  case CONSOLE: {
-			 try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-				result = getResultMusic(reader);
-			 } catch (IOException | NoSuchMusicTypeException e) {
-				throw new RuntimeException(e.getMessage(), e);
-			 }
-		  }
-		  break;
 		  case FILE: {
 			 try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
 				result = getType(reader);
 			 } catch (IOException | NoSuchMusicTypeException e) {
 				e.printStackTrace();
+			 }
+		  }
+		  break;
+		  case CONSOLE: {
+			 try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+				result = getResultMusic(reader);
+			 } catch (IOException | NoSuchMusicTypeException e) {
+				throw new RuntimeException(e.getMessage(), e);
 			 }
 		  }
 		  break;
