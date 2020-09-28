@@ -1,12 +1,10 @@
-package by.kukshinov.app.player.logics.impl;
+package by.kukshinov.app.player.logics;
 
 import by.kukshinov.app.player.entity.music.api.Music;
-import by.kukshinov.app.player.entity.music.impl.RockBand;
 import by.kukshinov.app.player.entity.music.song.Song;
 import by.kukshinov.app.player.entity.storage.impl.Disk;
-import by.kukshinov.app.player.logics.SavingSoftware;
-import by.kukshinov.app.player.logics.testData.TestMusicDisk;
-import org.jetbrains.annotations.NotNull;
+import by.kukshinov.app.player.logics.impl.DiskSaver;
+import by.kukshinov.app.player.testData.TestMusicDisk;
 import org.junit.Assert;
 import org.junit.Test;
 

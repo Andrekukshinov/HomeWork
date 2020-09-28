@@ -1,4 +1,4 @@
-package by.kukshinov.app.player.logics.view;
+package by.kukshinov.app.player.view;
 
 import by.kukshinov.app.player.constants.FilePath;
 import by.kukshinov.app.player.entity.music.api.Music;
@@ -6,7 +6,7 @@ import by.kukshinov.app.player.entity.music.song.Song;
 import by.kukshinov.app.player.entity.storage.impl.Disk;
 import by.kukshinov.app.player.logics.SavingSoftware;
 import by.kukshinov.app.player.logics.impl.DiskSaver;
-import by.kukshinov.app.player.logics.testData.TestMusicDisk;
+import by.kukshinov.app.player.testData.TestMusicDisk;
 import by.kukshinov.app.player.view.api.MusicDataPrinter;
 import by.kukshinov.app.player.view.impl.FileMusicDataPrinter;
 import org.junit.Assert;

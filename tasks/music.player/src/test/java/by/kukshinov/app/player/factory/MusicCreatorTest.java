@@ -1,11 +1,10 @@
-package by.kukshinov.app.player.logics.factory;
+package by.kukshinov.app.player.factory;
 
 import by.kukshinov.app.player.constants.FilePath;
 import by.kukshinov.app.player.constants.PlayLists;
 import by.kukshinov.app.player.entity.music.api.Music;
 import by.kukshinov.app.player.entity.music.impl.RockBand;
 import by.kukshinov.app.player.enums.PlayListDataSource;
-import by.kukshinov.app.player.factory.MusicCreator;
 import org.junit.Assert;
 import org.junit.Test;
 
