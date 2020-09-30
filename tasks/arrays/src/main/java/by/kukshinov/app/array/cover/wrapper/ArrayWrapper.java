@@ -2,9 +2,10 @@ package by.kukshinov.app.array.cover.wrapper;
 
 import by.kukshinov.app.array.cover.exception.ArrayException;
 
-public class Array {
+import java.util.Arrays;
+
+public class ArrayWrapper {
     private final int[] innerArray;
-    private final int LENGTH;
 
     private boolean isIndexValid(int index) {
 	   return index >= 0 && index < innerArray.length;
@@ -36,23 +37,20 @@ public class Array {
 	   return isSorted;
     }
 
-    public Array() {
-        LENGTH = 10;
-        innerArray = new int[LENGTH];
+    public ArrayWrapper() {
+        innerArray = new int[10];
     }
 
-    public Array(int length) throws ArrayException {
+    public ArrayWrapper(int length) throws ArrayException {
         if(length > 0) {
 		  innerArray = new int[length];
-		  this.LENGTH = length;
 	   } else {
 		  throw new ArrayException("Length must be positive!");
 	   }
     }
 
-    public Array(int[] innerArray) {
+    public ArrayWrapper(int[] innerArray) {
 	   this.innerArray = innerArray;
-	   this.LENGTH = innerArray.length;
     }
 
     public int getElement(int index) throws ArrayException {
@@ -76,7 +74,24 @@ public class Array {
     }
 
     public int getLength() {
-	   return LENGTH;
+	   return innerArray.length;
     }
-    // TODO: 29.09.2020 override equals toString hashCode 
+    // TODO: 29.09.2020 override equals toString hashCode
+
+    @Override
+    public boolean equals(Object o) {
+//	   if (this == o) return true;
+	   if (o == null || getClass() != o.getClass()) return false;
+	   ArrayWrapper wrapper = (ArrayWrapper) o;
+	   return Arrays.equals(innerArray, wrapper.innerArray);
+    }
+
+    @Override
+    public String toString() {
+	   return Arrays.toString(innerArray);
+    }
+    //    @Override
+//    public int hashCode() {
+//	   return Arrays.hashCode(innerArray);
+//    }
 }
